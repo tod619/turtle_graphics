@@ -2,6 +2,7 @@
 # 15/06/2023
 
 from turtle import Turtle, Screen
+import random
 
 tim = Turtle()
 # timmy_the_turtle.shape("turtle")
@@ -19,17 +20,20 @@ tim = Turtle()
 #     tim.forward(10)
 #     tim.pendown()
 
-# Draw a variety of shapes using Turtle
+# Draw a variety of shapes with different colours using Turtle
+colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "Wheat",
+           "SlateGray", "SeaGreen"]
 
 
 def draw_shape(num_sides):
+    angle = 360 / num_sides
     for _ in range(num_sides):
-        angle = 360 / num_sides
         tim.forward(100)
-        tim.left(angle)
+        tim.right(angle)
 
 
 for i in range(3, 11):
+    tim.color(random.choice(colours))
     draw_shape(i)
 
 screen = Screen()
