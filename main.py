@@ -13,11 +13,19 @@ tim = Turtle()
 #     tim.left(90)
 
 # Draw a dashed line
-for i in range(15):
-    tim.forward(10)
-    tim.penup()
-    tim.forward(10)
-    tim.pendown()
+# for i in range(15):
+#     tim.forward(10)
+#     tim.penup()
+#     tim.forward(10)
+#     tim.pendown()
+
+# Draw a variety of shapes using Turtle
+num_sides = 5
+
+for _ in range(num_sides):
+    angle = 360 / num_sides
+    tim.forward(100)
+    tim.left(angle)
 
 screen = Screen()
 screen.exitonclick()
