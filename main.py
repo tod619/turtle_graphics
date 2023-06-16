@@ -20,12 +20,17 @@ tim = Turtle()
 #     tim.pendown()
 
 # Draw a variety of shapes using Turtle
-num_sides = 5
 
-for _ in range(num_sides):
-    angle = 360 / num_sides
-    tim.forward(100)
-    tim.left(angle)
+
+def draw_shape(num_sides):
+    for _ in range(num_sides):
+        angle = 360 / num_sides
+        tim.forward(100)
+        tim.left(angle)
+
+
+for i in range(3, 11):
+    draw_shape(i)
 
 screen = Screen()
 screen.exitonclick()
