@@ -1,10 +1,12 @@
 # A project to explore the Turtle module
 # 15/06/2023
 
-from turtle import Turtle, Screen
+import turtle as t
 import random
 
-tim = Turtle()
+
+tim = t.Turtle()
+t.colormode(255)
 # timmy_the_turtle.shape("turtle")
 # timmy_the_turtle.color("red")
 
@@ -21,8 +23,16 @@ tim = Turtle()
 #     tim.pendown()
 
 
-colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "Wheat",
-           "SlateGray", "SeaGreen"]
+# colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "Wheat",
+#            "SlateGray", "SeaGreen"]
+
+def random_color():
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    color = (r, g, b)
+    return color
+
 
 diricetions = [0, 90, 180, 270]
 
@@ -43,12 +53,13 @@ def generate_random_walk(steps):
     tim.pensize(15)
     tim.speed("fastest")
     for _ in range(steps):
-        tim.color(random.choice(colours))
+        color = random_color()
+        tim.color(color)
         tim.forward(30)
         tim.setheading(random.choice(diricetions))
 
 
 generate_random_walk(100)
 
-screen = Screen()
+screen = t.Screen()
 screen.exitonclick()
