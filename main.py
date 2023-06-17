@@ -59,7 +59,7 @@ def generate_random_walk(steps):
         tim.setheading(random.choice(diricetions))
 
 
-generate_random_walk(100)
+generate_random_walk(200)
 
 screen = t.Screen()
 screen.exitonclick()
