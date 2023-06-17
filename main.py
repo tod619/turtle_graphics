@@ -41,6 +41,7 @@ diricetions = [0, 90, 180, 270]
 # Generate a random walk
 def generate_random_walk(steps):
     tim.pensize(15)
+    tim.speed("fastest")
     for _ in range(steps):
         tim.color(random.choice(colours))
         tim.forward(30)
