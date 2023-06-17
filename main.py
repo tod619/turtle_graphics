@@ -39,11 +39,14 @@ diricetions = [0, 90, 180, 270]
 #     draw_shape(i)
 
 # Generate a random walk
-for _ in range(200):
-    tim.color(random.choice(colours))
-    tim.forward(30)
-    tim.setheading(random.choice(diricetions))
+def generate_random_walk(steps):
+    for _ in range(steps):
+        tim.color(random.choice(colours))
+        tim.forward(30)
+        tim.setheading(random.choice(diricetions))
 
+
+generate_random_walk(100)
 
 screen = Screen()
 screen.exitonclick()
