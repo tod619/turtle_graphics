@@ -15,5 +15,11 @@ def random_color():
     return color
 
 
+for _ in range(100):
+    tim2.color(random_color())
+    tim2.circle(100)
+    tim2.setheading(tim2.heading() + 5)
+
+
 screen = t.Screen()
 screen.exitonclick()
